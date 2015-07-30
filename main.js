@@ -26,16 +26,16 @@ console.log(oldestPerson(persons));
 // 1. Define a function called `longestWord` that takes a string and returns the longest word in the string.
 function longestWord(string) {
   var stringBroken = string.split(" ");
-  var longestWord2 = 0;
-  var longestWordArray = [];
+  var longestWordLength = 0;
+  var longestWord = [];
   for (var i = 0; i < stringBroken.length; i++) {
-    if (longestWord2 < stringBroken[i].length) {
-      longestWord2 = stringBroken[i].length;
-      longestWordArray = stringBroken[i];
+    if (longestWordLength < stringBroken[i].length) {
+      longestWordLength = stringBroken[i].length;
+      longestWord = stringBroken[i];
       console.log(stringBroken[i])
     }
   }
-  return longestWordArray;
+  return longestWord;
 }
 console.log(longestWord("what is the supercali Example longest word of the string"));
 
