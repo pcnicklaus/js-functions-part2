@@ -1,3 +1,14 @@
+function titleCase(str) {
+  for (var i = 0; i < str.length; i++ )
+    if (str.charAt(i) === ' ') {
+      str.charAt(i+1).toUpperCase();
+    }
+  return str;
+}
+
+titleCase("I'm a little tea pot");
+
+
 //1. Define a function called `oldestPerson` that takes an object with names as keys and ages as values (e.g., {'Chuck': 22, 'Brian': 46}), and then returns the name of the oldest living person.
 var persons = [
   {name: "Chuck", age: 22},
@@ -18,7 +29,7 @@ function oldestPerson (people) {
 
     }
     console.log(oldestPerson.name);
-    return oldestPerson.age;
+    return oldestPerson.name;
   }
 console.log(oldestPerson(persons));
 
@@ -40,7 +51,7 @@ function longestWord(string) {
 console.log(longestWord("what is the supercali Example longest word of the string"));
 
 
-1. Refactor the `longestWord` function so that it ignores punctuation.
+// 1. Refactor the `longestWord` function so that it ignores punctuation.
 
 function longestWord(string) {
   var stringBroken = string.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(" ");
@@ -82,7 +93,7 @@ console.log(factorial(4));
 // 1. **Bonus**: Write a function called `palindrome` that takes a string as an argument and returns the string in reversed order. Return true if the string is the same as the reversed string, otherwise return false.
 
 function palindrome(string) {
-  var stringToArray = string.split("")
+  var stringToArray = string.split("");
   var reversedArray = stringToArray.reverse();
   var reversedString = reversedArray.join("");
   if (string === reversedString) {
